@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+
+   <div class="container">
+    <div class="text">fill this form</div>
+    <form action="https://formspree.io/f/meqwjqbo" method="post">
+        <div class="fild">
+            <span class="fa fa-user-o"></span>
+            <input type="text"placeholder="enter your name" name="Name" required id="name">
+        </div>
+        <div class="fild">
+            <span class="fa fa-whatsapp"></span>
+            <input type="number"  placeholder="contact no" name="Number" required id="number">
+        </div>
+        <div class="fild">
+            <span class="fa fa-envelope-o"></span>
+           
+            <input type="email"placeholder="enter your email" name="Email"required  id="email">
+        </div>
+       
+        <div class="fild">
+            <span class="fa fa-message"></span>
+            <textarea name="Addres" placeholder="enter your feedback" id="addres"   ></textarea>
+        </div>
+     <button type="submit">submit</button>
+     <div class="error"></div>
+    </form>
+   </div>
+   <script>
+    window.onload =function(){
+        alert("PLZ ENTER VALID INFORMATION \n COLLECTING DATAS FOR FUTHURE")
+    }
+    let form=document.querySelector("form")
+    form.addEventListener('submit', (e)=>{e.preventDefault()})
+
+   </script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+    *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #131419;
+           height: 100%;
+           place-items: center;
+           display: grid;
+           margin-top: 80px;       
+              text-align: center;
+        }
+        .container{
+                           padding:40px 30px;
+           border-radius: 10px;
+            width: 330px;
+            background:#131419;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+                        -3px -3px 9px   rgba(225,225,225,0.05);
+        }
+        .container .text{
+            color: #ffffffff;
+            font-size: 20px;
+            font-weight: 900;
+            font-family: Dune_Rise;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+                }
+              
+                @font-face {
+             font-family:"Dune_Rise";
+                   src: url('Dune_Rise.otf')
+              }
+                form .fild{
+                    height: 36px;
+                    width: 100%;
+                    display: flex;
+                    font-family: 'Audiowide',cursive;
+                }
+                .fild:nth-child(even){
+                    margin-bottom: 20px;
+                }
+                .fild:nth-child(odd){
+                    margin-bottom: 20px;
+                }
+                .fild input,textarea{
+                    height: 100%;
+                    width: 100%;
+                    outline: none;
+                    font-size: 20px;
+                    border: none;
+                    border-radius: 17px; 
+                    font-family: 'Caveat', cursive;
+                    padding-left: 45px;
+                    background:#131419;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+                        inset 3px 3px 90px   rgba(225,225,225,0.05);
+                        color: #88fdff;
+                }
+            input:focus {
+                border-radius: 5px;
+                border:2px solid #ffffff; 
+            }
+            textarea:focus {
+                border-radius: 5px;
+                border:2px solid #ffffff; 
+            }
+                .fild span{
+                    position: absolute;
+                    width: 50px;
+                    color: #ffffff;
+                    font-size: 18px;
+                    line-height: 40px;
+                }
+               textarea{
+                background: transparent;
+                width: 320px;
+                    text-align: center;
+                    resize: none;
+                        }
+                        input::placeholder{
+                            color:#6363f4a2;
+                            text-transform: capitalize;
+                            font-size: 17px;
+                        }
+                        textarea::placeholder{
+                            color: #6363f4a2;
+                            font-size: 17px;
+                            text-transform: capitalize;
+                        }
+                       button{
+                            width: 100%;
+                            height: 40px;
+                            font-size: 18px;
+                            font-weight: 700;
+                            font-family: Dune_Rise;
+                            outline: none;
+                            border: none;
+                            border-radius: 20px;
+                            background-color: #131419;
+                            box-shadow: 3px 4px 1px rgba(0, 0, 0, 0.5),
+                                        -5px -5px 10px   rgba(225,225,225,0.05);
+                            color: #88fdff;
+                            cursor: pointer;
+           }
+           button:focus{
+            box-shadow:inset 3px 4px 1px rgba(0, 0, 0, 0.5),
+                                       inset -5px -5px 10px   rgba(225,225,225,0.05);
+                           
+           }
+        /* number increes dicrees button rimove */
+      input::-webkit-inner-spin-button {
+        display: none;
+      }
+      
+    </style>
+</body>
+</html>
