@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --clr: #0ab3ff;
+      }
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #1c2630;
+      }
+      form {
+        background: #29313c;
+        padding: 60px 80px 60px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 11px;
+      }
+      form h2 {
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 50px;
+      }
+      .inputs {
+        position: relative;
+        width: 300px;
+        margin-bottom: 40px;
+      }
+      .inputs input {
+        position: relative;
+        width: 100%;
+        padding: 10px 0;
+        border: none;
+        background: transparent;
+        border-bottom: 2px solid #888;
+        outline: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 0.15em;
+      }
+      .inputs label {
+        position: absolute;
+        left: 0;
+        padding: 10px 5px;
+        color: gray;
+        text-transform: uppercase;
+        pointer-events: none;
+      }
+      .inputs label span {
+        position: relative;
+        display: inline-block;
+        letter-spacing: 0.05em;
+        transition: 0.2s ease-in-out;
+      }
+      .inputs input:focus ~ label span,
+      .inputs input:valid ~ label span {
+        color: var(--clr);
+        letter-spacing: 0.15em;
+        transform: translatey(-25px);
+      }
+      .inputs input:focus,
+      .inputs input:valid {
+        border-bottom: 2px solid var(--clr);
+      }
+      .inputs input[type="submit"] {
+        background: var(--clr);
+        border-radius: 33px;
+        font-size: 1.15em;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #1c2630;
+        border: none;
+        padding: 11px;
+        letter-spacing: 0.2em;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .inputs input[type="submit"]:hover {
+        letter-spacing: 0.35em;
+      }
+      form p {
+        color: #fff;
+        text-transform: uppercase;
+      }
+      form p a {
+        color: var(--clr);
+        font-weight: 500px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>New Account</h2>
+      <div class="inputs">
+        <input type="text" required />
+        <label>username</label>
+      </div>
+      <div class="inputs">
+        <input type="text" required />
+        <label>email</label>
+      </div>
+      <div class="inputs">
+        <input type="text" required />
+        <label>creat&nbsp;password</label>
+      </div>
+      <div class="inputs">
+        <input type="text" required />
+        <label>confirm&nbsppassword</label>
+      </div>
+      <div class="inputs">
+        <input type="submit" value="Create" />
+      </div>
+      <p>Alredy have an account ? <a href="#">Login</a></p>
+    </form>
+    <script>
+      let label = document.querySelectorAll("label").forEach((label) => {
+        label.innerHTML = label.innerText
+          .split("")
+          .map(
+            (letters, i) =>
+              `<span style="transition-delay:${i * 50}ms">${letters}</span>`
+          )
+          .join("");
+      });
+    </script>
+  </body>
+</html>
