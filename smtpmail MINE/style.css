@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #1f243d;
+  position: relative;
+}
+.content {
+  position: relative;
+}
+.content h2 {
+  text-transform: capitalize;
+  font-size: 40px;
+  color: #ededed;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.content form {
+  position: relative;
+  width: 600px;
+  text-align: center;
+}
+form .input-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.input-box .input-field {
+  width: 48.5%;
+  position: relative;
+}
+.field .item {
+  width: 100%;
+  padding: 18px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  color: #ededee;
+  margin: 12px 0;
+}
+.field .item::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: capitalize;
+}
+.field.error .item {
+  border-color: #d93025;
+}
+.field .error-txt {
+  font-size: 14px;
+  color: #d93025;
+  text-align: center;
+  margin: -5px 0 10px;
+  display: none;
+}
+
+.field.error .error-txt {
+  display: block;
+}
+form .textarea-field .item {
+  resize: none;
+}
+
+form button {
+  padding: 12px 30px;
+  background: #0ef;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px #0ef;
+  border-radius: 16px;
+  font-size: 16px;
+  color: #333;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+form button:hover {
+  box-shadow: none;
+}
