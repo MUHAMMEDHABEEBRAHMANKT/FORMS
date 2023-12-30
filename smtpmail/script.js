@@ -16,9 +16,9 @@ function sendEmail() {
                message : ${message.value}<br>`;
 
   Email.send({
-    SecureToken: "97c1703c-cbfa-49c5-8755-d4a05a1d75ea",
-    To: ["muhammadhabeebrahmam@gmail.com", "projectpurpose.mine@gmail.com"],
-    From: "projectpurpose.mine@gmail.com",
+    SecureToken: "YOUR SECURE TOKEN",
+    To: "RECIVER MAIL",
+    From: "SMTP REGISTRED MAIL",
     //Subject: "NEW SUBMITON ON SMTP FORM"+subject.value,
     Subject: "NEW SUBMITON ON SMTP FORM " + subjectValue,
     Body: bodyMsg,
